@@ -5,7 +5,7 @@ import React from "react";
 export default function Impact() {
   return (
     <CardSection className="bg-blue-900 text-white" title="Our Impact">
-      <div className="flex items-center justify-between">
+      <div className="md:flex items-center justify-between">
         <CardFeature
           title="+20,000 mT"
           description="dengan lebih dari 45 FishLog Quality Center di seluruh Indonesia"

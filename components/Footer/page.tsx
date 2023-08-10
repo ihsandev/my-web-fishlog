@@ -5,19 +5,19 @@ import { FiFacebook, FiLinkedin, FiInstagram } from "react-icons/fi";
 export default function Footer() {
   return (
     <footer className="bg-blue-900 p-16 text-white">
-      <div className="flex mb-10 gap-6 justify-between">
+      <div className="md:flex flex flex-col md:flex-row mb-10 gap-6 justify-between">
         <h1 className="text-4xl flex-1">
           Join us and be a part of building thre fisheries ecosystem in
           indonesia!
         </h1>
         <div className="flex-1">
-          <div className="flex justify-end gap-4">
+          <div className="flex md:justify-end gap-4">
             <Button title="Buyer" />
             <Button title="Suppliers" />
           </div>
         </div>
       </div>
-      <div className="flex justify-between">
+      <div className="md:flex flex flex-col md:flex-row justify-between md:gap-0 gap-6">
         <div>
           <h3 className="font-semibold text-lg">PT. Rantai Pasok Teknologi</h3>
           <p>Aviso Office, Epicentrum Walk, Lt 3 A306-307,</p>

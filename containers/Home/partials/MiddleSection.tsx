@@ -30,7 +30,7 @@ export default function MiddleSection() {
       title="Memperkuat Rantai Pasok Perikanan Bersama-sama"
     >
       <div>
-        <div className="flex items-center justify-between mb-24">
+        <div className="md:flex items-center justify-between mb-24">
           {itemCard.map((item) => (
             <Card key={item.id} image={item.image} title={item.title} />
           ))}

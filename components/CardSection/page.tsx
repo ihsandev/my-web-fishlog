@@ -12,7 +12,7 @@ export default function CardSection({
   className,
 }: ICardSection) {
   return (
-    <section className={`py-10 ${className}`}>
+    <section className={`py-10 ${className} md:px-0 px-6`}>
       <div className="max-w-screen-lg mx-auto">
         <div className=" flex justify-center">
           <h1 className="text-center text-5xl font-bold max-w-screen-md mb-10">
