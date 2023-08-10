@@ -3,6 +3,7 @@ import Card from "@/components/Card/page";
 import CardFeature from "@/components/CardFeature/page";
 import CardSection from "@/components/CardSection/page";
 import Slider from "react-slick";
+import { FiHome } from "react-icons/fi";
 
 const itemCard = [
   {
@@ -46,20 +47,26 @@ export default function MiddleSection() {
               >
                 <div className="pr-4 ">
                   <CardFeature
+                    className="bg-slate-200"
                     title="Lorem Ipsum Dolor 1"
                     description="FishLog percaya bahwa kami telah menemukan kunci untuk mengatasi kerugian pangan di dunia. Kendala dan tantangan masih ada di hadapan kita jika kita benar-benar ingin mengoptimalkan dampak sektor produk perikanan."
+                    icon={<FiHome />}
                   />
                 </div>
                 <div className="pr-4 ">
                   <CardFeature
+                    className="bg-slate-200"
                     title="Lorem Ipsum Dolor 2"
                     description="FishLog percaya bahwa kami telah menemukan kunci untuk mengatasi kerugian pangan di dunia. Kendala dan tantangan masih ada di hadapan kita jika kita benar-benar ingin mengoptimalkan dampak sektor produk perikanan."
+                    icon={<FiHome />}
                   />
                 </div>
                 <div className="pr-4 ">
                   <CardFeature
+                    className="bg-slate-200"
                     title="Lorem Ipsum Dolor 3"
                     description="FishLog percaya bahwa kami telah menemukan kunci untuk mengatasi kerugian pangan di dunia. Kendala dan tantangan masih ada di hadapan kita jika kita benar-benar ingin mengoptimalkan dampak sektor produk perikanan."
+                    icon={<FiHome />}
                   />
                 </div>
               </Slider>
