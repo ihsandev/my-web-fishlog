@@ -17,14 +17,15 @@ export default function HeroImage({ heros }: IHeroImage) {
         dots={true}
         infinite={true}
         speed={500}
+        autoplay={true}
         slidesToShow={1}
         slidesToScroll={1}
         className="w-full"
       >
         {heros?.map((hero, i) => (
           <div key={i} className="relative">
-            <div className="max-w-screen-lg mx-auto">
-              <h1 className="absolute text-white text-7xl font-bold top-80 max-w-screen-md">
+            <div className="max-w-screen-lg mx-auto px-6 md:px-0">
+              <h1 className="absolute text-white md:text-7xl font-bold top-28 md:top-80 max-w-screen-md">
                 {hero.title}
               </h1>
             </div>

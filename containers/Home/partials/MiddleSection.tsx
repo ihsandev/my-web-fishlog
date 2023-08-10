@@ -35,15 +35,37 @@ export default function MiddleSection() {
             <Card key={item.id} image={item.image} title={item.title} />
           ))}
         </div>
-        <div className="flex justify-between">
+        <div className="flex md:flex-row flex-col gap-6 justify-between relative">
           <div />
-          <div className="bg-blue-900 max-w-screen-md p-24 h-[500px] justify-end rounded-xl">
-            <div className="w-[650px] absolute -left-[200px]">
+          <div>
+            <div className="w-full md:w-[650px] md:absolute md:top-20 md:-left-[320px] mb-10 md:mb-0">
               <Slider
                 dots={false}
                 slidesToShow={2}
                 slidesToScroll={2}
                 arrows={false}
+                infinite={true}
+                autoplay={true}
+                speed={500}
+                responsive={[
+                  {
+                    breakpoint: 1024,
+                    settings: {
+                      slidesToShow: 3,
+                      slidesToScroll: 3,
+                      infinite: true,
+                      dots: true,
+                    },
+                  },
+                  {
+                    breakpoint: 600,
+                    settings: {
+                      slidesToShow: 1,
+                      slidesToScroll: 1,
+                      initialSlide: 1,
+                    },
+                  },
+                ]}
               >
                 <div className="pr-4 ">
                   <CardFeature
@@ -71,16 +93,26 @@ export default function MiddleSection() {
                 </div>
               </Slider>
             </div>
-            <div className="text-white">
-              <h2 className="mb-12 text-2xl font-bold">
-                Manfaat Menjadi Bagian Ekosistem FishLog
-              </h2>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
-                porro magni, doloribus maxime commodi dicta saepe ad voluptates
-                ex corporis recusandae repellat architecto ab facere. Totam
-                voluptas repellat modi suscipit.
-              </p>
+            <div className="bg-blue-900 max-w-screen-md p-6 md:p-24 min-h-[500px] justify-end rounded-xl">
+              <div className="text-white">
+                <h2 className="mb-12 text-2xl font-bold">
+                  Manfaat Menjadi Bagian Ekosistem FishLog
+                </h2>
+                <div className="flex flex-col gap-6">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Enim porro magni, doloribus maxime commodi dicta saepe ad
+                    voluptates ex corporis recusandae repellat architecto ab
+                    facere. Totam voluptas repellat modi suscipit.
+                  </p>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Enim porro magni, doloribus maxime commodi dicta saepe ad
+                    voluptates ex corporis recusandae repellat architecto ab
+                    facere. Totam voluptas repellat modi suscipit.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

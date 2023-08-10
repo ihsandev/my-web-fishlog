@@ -3,10 +3,12 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { FiAlignJustify, FiXCircle } from "react-icons/fi";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
   const [updateStyle, setUpdateStyle] = useState(false);
   const [show, setShow] = useState(false);
+  const pathname = usePathname();
 
   const handleScroll = () => {
     const height = window.pageYOffset;
@@ -15,13 +17,19 @@ export default function Header() {
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-  }, [updateStyle]);
+    if (pathname === "/") {
+      window.addEventListener("scroll", handleScroll);
+    }
+  }, [updateStyle, pathname]);
 
   return (
     <header
       className={`${
-        updateStyle ? "bg-blue-900" : "bg-transparent"
+        pathname === "/"
+          ? updateStyle
+            ? "bg-blue-900"
+            : "bg-transparent"
+          : "bg-blue-900"
       } fixed top-0 left-0 right-0 z-10 text-white py-3`}
     >
       <div className="max-w-screen-lg flex items-center justify-between mx-auto md:px-0 px-6">

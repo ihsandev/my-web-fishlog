@@ -12,6 +12,9 @@ export default function Companion() {
           slidesToShow={5}
           slidesToScroll={5}
           arrows={false}
+          infinite={true}
+          autoplay={true}
+          speed={500}
           responsive={[
             {
               breakpoint: 1024,
@@ -28,6 +31,7 @@ export default function Companion() {
                 slidesToShow: 2,
                 slidesToScroll: 2,
                 initialSlide: 2,
+                dots: false,
               },
             },
             {
@@ -35,6 +39,7 @@ export default function Companion() {
               settings: {
                 slidesToShow: 1,
                 slidesToScroll: 1,
+                dots: false,
               },
             },
           ]}

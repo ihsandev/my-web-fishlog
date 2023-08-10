@@ -4,7 +4,7 @@ import { FiFacebook, FiLinkedin, FiInstagram } from "react-icons/fi";
 
 export default function Footer() {
   return (
-    <footer className="bg-blue-900 p-16 text-white">
+    <footer className="bg-blue-900 md:p-16 p-6 text-white">
       <div className="md:flex flex flex-col md:flex-row mb-10 gap-6 justify-between">
         <h1 className="text-4xl flex-1">
           Join us and be a part of building thre fisheries ecosystem in
@@ -24,7 +24,7 @@ export default function Footer() {
           <p>Setiabudi, Jakarta Selatan,</p>
           <p>Telp. 0251 8579380</p>
         </div>
-        <div className="flex gap-8">
+        <div className="flex md:flex-row flex-col gap-8">
           <figure className="flex flex-col">
             <h3 className="font-semibold">Partnership</h3>
             <Link className="text-sm" href="/">
