@@ -28,6 +28,7 @@ export default function MiddleSection() {
     <CardSection
       className="relative"
       title="Memperkuat Rantai Pasok Perikanan Bersama-sama"
+      withContainer={false}
     >
       <div>
         <div className="md:flex items-center justify-between mb-24">
@@ -38,7 +39,7 @@ export default function MiddleSection() {
         <div className="flex md:flex-row flex-col gap-6 justify-between relative">
           <div />
           <div>
-            <div className="w-full md:w-[650px] md:absolute md:top-20 md:-left-[320px] mb-10 md:mb-0">
+            <div className="w-full md:w-[650px] md:absolute md:top-20 md:-left-[90px] mb-10 md:mb-0">
               <Slider
                 dots={false}
                 slidesToShow={2}
@@ -93,7 +94,7 @@ export default function MiddleSection() {
                 </div>
               </Slider>
             </div>
-            <div className="bg-blue-900 max-w-screen-md p-6 md:p-24 min-h-[500px] justify-end rounded-xl">
+            <div className="bg-blue-900 max-w-screen-md p-6 md:p-24 min-h-[500px] justify-end md:rounded-tl-xl md:rounded-bl-xl rounded-lg">
               <div className="text-white">
                 <h2 className="mb-12 text-2xl font-bold">
                   Manfaat Menjadi Bagian Ekosistem FishLog
