@@ -1,10 +1,13 @@
-import HeroImage from "@/components/HeroImage/page";
-import React from "react";
+import Hero from "./partials/Hero";
+import Impact from "./partials/Impact";
+import MiddleSection from "./partials/MiddleSection";
 
 export default function Home() {
   return (
     <div>
-      <HeroImage />
+      <Hero />
+      <MiddleSection />
+      <Impact />
     </div>
   );
 }
