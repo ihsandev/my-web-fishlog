@@ -94,7 +94,7 @@ export default function MiddleSection() {
                 </div>
               </Slider>
             </div>
-            <div className="bg-blue-900 max-w-screen-md p-6 md:p-24 min-h-[500px] justify-end md:rounded-tl-xl md:rounded-bl-xl rounded-lg">
+            <div className="bg-blue-900 max-w-screen-md p-6 md:p-24 min-h-[500px] justify-end md:rounded-tl-xl md:rounded-bl-xl">
               <div className="text-white">
                 <h2 className="mb-12 text-2xl font-bold">
                   Manfaat Menjadi Bagian Ekosistem FishLog

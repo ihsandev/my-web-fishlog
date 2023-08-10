@@ -15,3 +15,7 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
+
+.hero .slick-slider .slick-list .slick-track {
+  height: 100vh;
+}

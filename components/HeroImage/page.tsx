@@ -12,7 +12,7 @@ interface IHeroImage {
 
 export default function HeroImage({ heros }: IHeroImage) {
   return (
-    <section className="md:min-h-screen overflow-hidden">
+    <section className="md:min-h-screen h-[70vh] overflow-hidden hero">
       <Slider
         dots={true}
         infinite={true}
@@ -20,17 +20,17 @@ export default function HeroImage({ heros }: IHeroImage) {
         autoplay={true}
         slidesToShow={1}
         slidesToScroll={1}
-        className="w-full"
+        className="md:min-h-screen h-[70vh]"
       >
         {heros?.map((hero, i) => (
           <div key={i} className="relative">
             <div className="max-w-screen-lg mx-auto px-6 md:px-0">
-              <h1 className="absolute text-white md:text-7xl font-bold top-28 md:top-80 max-w-screen-md">
+              <h1 className="absolute text-white text-5xl md:text-7xl font-bold top-32 md:top-64 max-w-screen-md">
                 {hero.title}
               </h1>
             </div>
             <Image
-              className="w-full h-full"
+              className="w-full object-cover md:h-screen h-[70vh]"
               alt="hero"
               src={`/images/${hero.src}`}
               width={800}
