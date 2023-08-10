@@ -1,9 +1,14 @@
 "use client";
 import Card from "@/components/Card/page";
 import CardSection from "@/components/CardSection/page";
+import { ICompanion } from "@/types/home";
 import Slider from "react-slick";
 
-export default function Companion() {
+export default function Companion({
+  data,
+}: {
+  data: ICompanion[] | undefined;
+}) {
   return (
     <CardSection className="bg-slate-200" title="Our Companion">
       <div>
@@ -44,11 +49,11 @@ export default function Companion() {
             },
           ]}
         >
-          {[...new Array(20)].map((_, i) => (
+          {data?.map((comp, i) => (
             <div key={i} className="pr-6">
               <Card
                 cardStyle="p-6 bg-white rounded-lg"
-                image="/images/fishlog-academy.png"
+                image={`/images/${comp.src}`}
               />
             </div>
           ))}

@@ -1,11 +1,8 @@
 "use client";
 import Slider from "react-slick";
 import Image from "next/image";
+import { IHeros } from "@/types/home";
 
-interface IHeros {
-  title?: string;
-  src?: any;
-}
 interface IHeroImage {
   heros?: IHeros[];
 }

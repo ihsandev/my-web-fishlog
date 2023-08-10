@@ -4,36 +4,23 @@ import CardFeature from "@/components/CardFeature/page";
 import CardSection from "@/components/CardSection/page";
 import Slider from "react-slick";
 import { FiHome } from "react-icons/fi";
+import { ISummary } from "@/types/home";
 
-const itemCard = [
-  {
-    id: 1,
-    image: "/images/fish-1.jpg",
-    title: "Membangun ekosistem perikanan yang berkelanjutan di Indonesia",
-  },
-  {
-    id: 2,
-    image: "/images/fish-2.jpg",
-    title: "Membangun ekosistem perikanan yang berkelanjutan di Indonesia",
-  },
-  {
-    id: 3,
-    image: "/images/fish-3.jpg",
-    title: "Membangun ekosistem perikanan yang berkelanjutan di Indonesia",
-  },
-];
-
-export default function MiddleSection() {
+export default function MiddleSection({
+  summary,
+}: {
+  summary: ISummary | undefined;
+}) {
   return (
     <CardSection
       className="relative"
-      title="Memperkuat Rantai Pasok Perikanan Bersama-sama"
+      title={summary?.title}
       withContainer={false}
     >
       <div>
         <div className="max-w-screen-lg mx-auto">
           <div className="flex md:flex-row flex-col items-center justify-between mb-24 gap-6">
-            {itemCard.map((item) => (
+            {summary?.about.map((item) => (
               <Card key={item.id} image={item.image} title={item.title} />
             ))}
           </div>
@@ -41,7 +28,7 @@ export default function MiddleSection() {
         <div className="flex md:flex-row flex-col gap-6 justify-between relative">
           <div />
           <div>
-            <div className="w-full md:w-[650px] md:absolute md:top-20 md:-left-[90px] mb-10 md:mb-0">
+            <div className="w-full md:w-[650px] md:absolute md:top-20 md:-left-[150px] mb-10 md:mb-0">
               <Slider
                 dots={false}
                 slidesToShow={2}
@@ -70,52 +57,28 @@ export default function MiddleSection() {
                   },
                 ]}
               >
-                <div className="pr-4 ">
-                  <CardFeature
-                    className="bg-slate-200"
-                    title="Lorem Ipsum Dolor 1"
-                    description="FishLog percaya bahwa kami telah menemukan kunci untuk mengatasi kerugian pangan di dunia. Kendala dan tantangan masih ada di hadapan kita jika kita benar-benar ingin mengoptimalkan dampak sektor produk perikanan."
-                    icon={<FiHome />}
-                  />
-                </div>
-                <div className="pr-4 ">
-                  <CardFeature
-                    className="bg-slate-200"
-                    title="Lorem Ipsum Dolor 2"
-                    description="FishLog percaya bahwa kami telah menemukan kunci untuk mengatasi kerugian pangan di dunia. Kendala dan tantangan masih ada di hadapan kita jika kita benar-benar ingin mengoptimalkan dampak sektor produk perikanan."
-                    icon={<FiHome />}
-                  />
-                </div>
-                <div className="pr-4 ">
-                  <CardFeature
-                    className="bg-slate-200"
-                    title="Lorem Ipsum Dolor 3"
-                    description="FishLog percaya bahwa kami telah menemukan kunci untuk mengatasi kerugian pangan di dunia. Kendala dan tantangan masih ada di hadapan kita jika kita benar-benar ingin mengoptimalkan dampak sektor produk perikanan."
-                    icon={<FiHome />}
-                  />
-                </div>
+                {summary?.feature.map((feat, i) => (
+                  <div className="pr-4" key={i}>
+                    <CardFeature
+                      className="bg-slate-200"
+                      title={feat.title}
+                      description={feat.description}
+                      icon={feat.icon}
+                    />
+                  </div>
+                ))}
               </Slider>
             </div>
-            <div className="bg-blue-900 max-w-screen-md p-6 md:p-24 min-h-[500px] justify-end md:rounded-tl-xl md:rounded-bl-xl">
-              <div className="text-white">
-                <h2 className="mb-12 text-2xl font-bold">
-                  Manfaat Menjadi Bagian Ekosistem FishLog
-                </h2>
-                <div className="flex flex-col gap-6">
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Enim porro magni, doloribus maxime commodi dicta saepe ad
-                    voluptates ex corporis recusandae repellat architecto ab
-                    facere. Totam voluptas repellat modi suscipit.
-                  </p>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Enim porro magni, doloribus maxime commodi dicta saepe ad
-                    voluptates ex corporis recusandae repellat architecto ab
-                    facere. Totam voluptas repellat modi suscipit.
-                  </p>
-                </div>
-              </div>
+            <div className="bg-blue-900 text-white max-w-screen-lg md:p-24 p-6 min-h-[500px] md:rounded-tl-xl md:rounded-bl-xl">
+              <h2 className="mb-8 text-3xl font-bold md:pl-52 pr-60">
+                {summary?.mainFeature.title}
+              </h2>
+              <div
+                className="flex flex-col gap-6 md:pl-52"
+                dangerouslySetInnerHTML={{
+                  __html: summary?.mainFeature.description || "",
+                }}
+              />
             </div>
           </div>
         </div>

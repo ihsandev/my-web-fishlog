@@ -1,20 +1,6 @@
 import HeroImage from "@/components/HeroImage/page";
+import { IHeros } from "@/types/home";
 
-const heros = [
-  {
-    title: "Connecting the Nation throught the fisheries supply cain",
-    src: "fish-1.jpg",
-  },
-  {
-    title: "Connecting the Nation throught the fisheries supply cain",
-    src: "fish-2.jpg",
-  },
-  {
-    title: "Connecting the Nation throught the fisheries supply cain",
-    src: "fish-3.jpg",
-  },
-];
-
-export default function Hero() {
+export default function Hero({ heros }: { heros: IHeros[] | undefined }) {
   return <HeroImage heros={heros} />;
 }
