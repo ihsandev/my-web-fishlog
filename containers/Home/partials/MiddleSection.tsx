@@ -31,10 +31,12 @@ export default function MiddleSection() {
       withContainer={false}
     >
       <div>
-        <div className="md:flex items-center justify-between mb-24">
-          {itemCard.map((item) => (
-            <Card key={item.id} image={item.image} title={item.title} />
-          ))}
+        <div className="max-w-screen-lg mx-auto">
+          <div className="flex md:flex-row flex-col items-center justify-between mb-24 gap-6">
+            {itemCard.map((item) => (
+              <Card key={item.id} image={item.image} title={item.title} />
+            ))}
+          </div>
         </div>
         <div className="flex md:flex-row flex-col gap-6 justify-between relative">
           <div />
