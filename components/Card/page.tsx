@@ -3,11 +3,12 @@ import Image from "next/image";
 interface ICard {
   image?: string;
   title?: string;
+  cardStyle?: string;
 }
 
-export default function Card({ image, title }: ICard) {
+export default function Card({ image, title, cardStyle }: ICard) {
   return (
-    <div className="flex flex-col items-center">
+    <div className={`flex flex-col items-center ${cardStyle}`}>
       <Image
         alt="card"
         src={image || "/images/image-placeholder.svg"}
@@ -15,7 +16,7 @@ export default function Card({ image, title }: ICard) {
         height={300}
         className="rounded-xl object-cover"
       />
-      <h5 className="text-center mt-4">{title}</h5>
+      {title && <h5 className="text-center mt-4">{title}</h5>}
     </div>
   );
 }
