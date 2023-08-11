@@ -1,6 +1,6 @@
 "use client";
-import Card from "@/components/Card/page";
-import CardSection from "@/components/CardSection/page";
+import Card from "@/components/Card";
+import CardSection from "@/components/CardSection";
 import { ICompanion } from "@/types/home";
 import Slider from "react-slick";
 

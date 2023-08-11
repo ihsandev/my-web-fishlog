@@ -1,7 +1,7 @@
 "use client";
-import Card from "@/components/Card/page";
-import CardFeature from "@/components/CardFeature/page";
-import CardSection from "@/components/CardSection/page";
+import Card from "@/components/Card";
+import CardFeature from "@/components/CardFeature";
+import CardSection from "@/components/CardSection";
 import Slider from "react-slick";
 import { FiHome } from "react-icons/fi";
 import { ISummary } from "@/types/home";

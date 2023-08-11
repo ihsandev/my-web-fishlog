@@ -1,4 +1,4 @@
-import Button from "../Button/page";
+import Button from "../Button";
 import Link from "next/link";
 import { FiFacebook, FiLinkedin, FiInstagram } from "react-icons/fi";
 

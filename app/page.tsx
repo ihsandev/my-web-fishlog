@@ -1,4 +1,4 @@
-import Home from "@/containers/Home/page";
+import Home from "@/containers/Home";
 import Image from "next/image";
 
 export default function Index() {

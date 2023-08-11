@@ -1,5 +1,5 @@
-import CardFeature from "@/components/CardFeature/page";
-import CardSection from "@/components/CardSection/page";
+import CardFeature from "@/components/CardFeature";
+import CardSection from "@/components/CardSection";
 import { IImpact } from "@/types/home";
 import React from "react";
 
